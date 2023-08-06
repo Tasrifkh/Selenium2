@@ -18,7 +18,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 # Set the path to the ChromeDriver executable
-chrome_driver_path = "/Users/nqveenkhunteta/Downloads/chromedriver"
+
 # Set the URL with basic authentication
 url_with_auth = "http://admin:admin@the-internet.herokuapp.com/basic_auth"
 
