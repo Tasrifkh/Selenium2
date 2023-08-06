@@ -1,17 +1,3 @@
-# import time
-#
-# from selenium import webdriver
-# from selenium.webdriver.common.by import By
-# "Authentication pop up can not be handled by using any locators in selenium."
-# "We need to pass username:password pair in application URL."
-#
-#
-# driver = webdriver.Chrome()
-# driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth")
-#
-# time.sleep(2)
-#
-# driver.quit()
 import time
 
 from selenium import webdriver
@@ -39,6 +25,20 @@ finally:
     # Close the browser window
     driver.quit()
 
+
+# import time
 #
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# "Authentication pop up can not be handled by using any locators in selenium."
+# "We need to pass username:password pair in application URL."
+#
+#
+# driver = webdriver.Chrome()
+# driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth")
+#
+# time.sleep(2)
+#
+# driver.quit()
 
 
