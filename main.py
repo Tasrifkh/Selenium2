@@ -1,16 +1,35 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+class MainFile():
+    def testweb(self):
+        driver = webdriver.Chrome()
+        driver.get("https://the-internet.herokuapp.com/add_remove_elements/")
+        time.sleep(1)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+        for _ in range(1):
+            btnAdElement = driver.find_element(By.XPATH, "//button[normalize-space()='Add Element']")
+            # clicking on the button
+            btnAdElement.click()
+            time.sleep(1)  # Adding a small delay between clicks
+
+        time.sleep(1)
+
+        btndlt = driver.find_elements(By.XPATH, "//button[normalize-space()='Delete']")
+        # Clicking on the Delete buttons for all added elements
+        for btn in btndlt:
+            btn.click()
+            time.sleep(1)  # Adding a small delay between clicks
+
+        driver.quit()
+
+
+myfunc = MainFile()
+myfunc.testweb()
+
+##changes
+
+#change
+
